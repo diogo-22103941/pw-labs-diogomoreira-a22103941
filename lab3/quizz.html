@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Lisboa - Quizz</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="../lab2/images/favicon.ico"/>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <nav>
+        <a href="../lab2/index.html" target="_self">Introdução</a> |
+        <a href="../lab2/local.html" target="_self">📍 Localização</a> |
+        <a href="../lab2/multimedia.html" target="_self">📷 Multimédia</a> |
+        <a href="../lab2/info.html" target="_self">&#9432; Informações</a> |
+        <a href="quizz.html" target="_self">❓ <b>Quizz</b></a> |
+        <a href="html5-css.html" target="_self">HTML5 e CSS</a> |
+        <a href="../index.html" target="_self">🔙 Home</a>
+    </nav>
+<h3>Quizz</h3>
+<p>Responde ao Quizz sobre Lisboa e mostra que conheces bem a cidade!</p>
+
+<form action="mailto: a22103941@alunos.ulht.pt" method="post" enctype="multipart/form-data">
+    <fieldset id="fieldset2">
+        <fieldset id="fieldset1">
+            <legend>Info utilizador</legend>
+            <p><input type="text" name="nome" placeholder="Nome" autocomplete="off" maxlength="25"></p>
+            <p><input type="text" name="apelido" placeholder="Apelido" autocomplete="off" maxlength="25"></p>
+            <p>Data nascimento: <input type="date" name="datanasc" autocomplete="off"></p>
+        </fieldset>
+        <fieldset id="fieldset3">
+            <legend>Questões</legend>
+            <p>Lisboa é a capital de que país? <input type="text" name="país" maxlength="25"></p>
+            <div>
+                <p>Indica qual dos seguintes monumentos situa-se em Lisboa:</p>
+                <input type="radio" id="mon1" name="monumento" value="Mosteiro_Jeronimos">
+                <label for="mon1">Mosteiro dos Jerónimos</label>
+                <input type="radio" id="mon2" name="monumento" value="Palacio_Bolsa">
+                <label for="mon2">Palácio da Bolsa</label>
+                <input type="radio" id="mon3" name="monumento" value="Torre_Clerigos">
+                <label for="mon3">Torre dos Clérigos</label>
+            </div>
+            <div>
+                <p>Indica quais dos seguintes são clubes que situam-se em Lisboa:</p>
+                <input type="checkbox" id="sporting" name="clube1" value="Sporting">
+                <label for="sporting"> Sporting CP</label>
+                <input type="checkbox" id="benfica" name="clube2" value="Benfica">
+                <label for="benfica"> SL Benfica</label>
+                <input type="checkbox" id="porto" name="clube3" value="Porto">
+                <label for="porto"> FC Porto</label>
+            </div>
+            <div>
+                <p>Seleciona a cor principal de um dos clubes escolhidos a cima:</p>
+                <input type="color" name="corClube" value="#ffffff">
+            </div>
+            <div>
+                <p>Indica o teu gosto pela cidade: <input type="range" name="avaliacao_Cidade" min="0" max="10"></p>
+            </div>
+            Insira a sua opinião:<br>
+            <textarea name="mensagem" rows="10" cols="30"></textarea>
+        </fieldset>
+    </fieldset>
+    <input type="submit" value="Submeter">
+</form>
+
+</body>
+</html>

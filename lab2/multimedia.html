@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <title>Lisboa</title>
-        <meta charset="UTF-8">
-        <meta name="author" content="Diogo">
-        <meta name="keywords" content="lisboa,portugal">
-        <meta name="description" content="Website sobre Lisboa">
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
-    </head>
-    <body style="background-color:lightcyan">
-    <h1>Lisboa</h1>
-    <img src="images/lisboa.jpg" alt="Elétrico em Lisboa">
+
+<head>
+    <title>Lisboa</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Diogo">
+    <meta name="keywords" content="lisboa,portugal">
+    <meta name="description" content="Website sobre Lisboa">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="../lab3/estilos.css">
+</head>
+
+<body style="background-color:lightcyan">
+    <header>
+        <h1>Lisboa</h1>
+        <img src="images/lisboa.jpg" alt="Elétrico em Lisboa">
+    </header>
     <br>
-    <a href="index.html">Introdução</a> |
-    <a href="local.html">Localização</a> |
-    <a href="multimedia.html"><b>Multimédia</b></a> |
-    <a href="info.html">Informações</a> |
-    <a href="../index.html">Home</a>
+    <nav>
+        <a href="index.html" target="_self"><b>Introdução</b></a> |
+        <a href="local.html" target="_self">Localização</a> |
+        <a href="multimedia.html" target="_self">Multimédia</a> |
+        <a href="info.html" target="_self">Informações</a> |
+        <a href="../index.html" target="_self">Home</a>
+    </nav>
 
-    <h2>Multimédia</h2>
-    <p><a href="#fotografias">Fotografias</a> | <a href="#video">Video</a> | <a href="#poema">poema</a></p>
+    <main>
+        <h2>Multimédia</h2>
+        <p><a href="#fotografias">Fotografias</a> | <a href="#video">Video</a> | <a href="#poema">poema</a></p>
 
-    <h3 id="fotografias">Fotografias</h3>
-    <pre>As fotografias que se seguem são do centro de Lisboa</pre>
-    <p><a href="images/lisboa1_grande.jpg" target="foto"><img src="images/lisboa1_pequena.jpg" alt="Lisboa1" width="100"></a>
-    <a href="images/lisboa2_grande.jpg" target="foto"><img src="images/lisboa2_pequena.jpg" alt="Lisboa2" width="100"></a>
-    <a href="images/lisboa3_grande.jpg" target="foto"><img src="images/lisboa3_pequena.jpg" alt="Lisboa3" width="100"></a></p>
-    <iframe width="600" height="400" name="foto" src="images/lisboa1_grande.jpg" frameborder="1"></iframe>
+        <h3 id="fotografias">Fotografias</h3>
+        <pre>As fotografias que se seguem são do centro de Lisboa</pre>
+        <p>
+            <a href="images/lisboa1_grande.jpg" target="foto"><img src="images/lisboa1_pequena.jpg" alt="Lisboa1"
+                    width="100">
+                <a href="images/lisboa2_grande.jpg" target="foto"><img src="images/lisboa2_pequena.jpg" alt="Lisboa2"
+                        width="100"></a>
+                <a href="images/lisboa3_grande.jpg" target="foto"><img src="images/lisboa3_pequena.jpg" alt="Lisboa3"
+                        width="100"></a>
+        </p>
+        <iframe width="600" height="400" name="foto" src="images/lisboa1_grande.jpg" frameborder="1"></iframe>
 
-    <h3 id="video">Video</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/N8bHCHl8X_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3 id="video">Video</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/N8bHCHl8X_0" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
 
-    <h3 id="poema">Poema</h3>
-    <pre><center><h4>Lisboa</h4><h5>Eugénio de Andrade, in Até Amanhã, 1956</h5>
+        <h3 id="poema">Poema</h3>
+        <pre><center><h4>Lisboa</h4><h5>Eugénio de Andrade, in Até Amanhã, 1956</h5>
 <i>Alguém diz com lentidão:
 “Lisboa, sabes…”
 Eu sei. É uma rapariga
@@ -45,7 +61,12 @@ a solidão aberta
 nos lábios e nos dedos,
 descendo degraus
 e degraus e degraus até ao rio.Eu sei. E tu, sabias?</i></center></pre>
+    </main>
 
+    <footer>
+        <h6>DIOGO • 22103941 • LEI • ULHT</h6>
+    </footer>
 
-    </body>
+</body>
+
 </html>

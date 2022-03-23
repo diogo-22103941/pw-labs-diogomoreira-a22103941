@@ -1,0 +1,99 @@
+body {background-color: rgb(226, 226, 226);}
+
+* {
+    font-Family: 'Syne Mono', monospace;
+}
+
+#fieldset1:hover { background-color: #919191; color:beige}
+#fieldset2 { background-color: #c0c0c0; border-radius: 2%; box-shadow: 5px 5px rgb(126, 126, 126); margin-bottom: 15px; max-width: fit-content;}
+#fieldset3:hover { background-color: #8f8f8f; color:beige}
+
+p:first-child::first-letter {
+    font-family: Brush Script MT;
+    font-size: 1.5rem;
+}
+
+nav > a[target] {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+nav > a:hover {
+    color: rgb(78, 78, 78);
+}
+
+nav > a:hover {
+    color: rgb(78, 78, 78);
+}
+
+h3 {
+    color: #06682f;
+}
+
+legend {
+    color: blue;
+}
+
+#delBorder {
+    border-style: none;
+}
+
+.boldFont {
+    font-weight: bold;
+}
+
+.greenFont {
+    color: rgb(0, 167, 50);
+}
+
+.blueFont {
+    color: rgb(3, 0, 167);
+}
+
+section {
+    margin-top: 40px;
+}
+
+section table {
+    margin-top: 10px;
+}
+
+.hoverLine:hover {
+    background-color: rgb(126, 126, 126);
+    color: white;
+}
+
+th {
+    border-style: solid;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+tr:nth-child(2) > td:first-child {
+    border-style: solid;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 2px;
+    border-bottom-right-radius: 10px;
+    border-color: black;
+}
+
+section:nth-child(2n) > table {
+    background-color: #c0c0c0;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgb(126, 126, 126);
+    margin-bottom: 1px;
+}
+
+section:nth-child(2n + 1) > table {
+    border-style: solid;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 2px;
+    box-shadow: 5px 5px rgb(126, 126, 126);
+}
+
+section:nth-child(2n + 1) > tr {
+    border-width: 2px;
+}
