@@ -18,6 +18,30 @@ nav > a[target] {
     text-decoration: none;
 }
 
+
+h1:first-child {
+    font-family: cursive;
+    font-size: 3rem;
+}
+
+h1::first-letter {
+    font-size: 5rem;
+}
+
+footer {
+    border-style: solid;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-color: gray;
+    margin-top:20mm;
+}
+
+iframe {
+    border-radius: 20px;
+    box-shadow: 5px 5px gray;
+}
+
 nav > a:hover {
     color: rgb(78, 78, 78);
 }
