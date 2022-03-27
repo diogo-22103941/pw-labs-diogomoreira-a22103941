@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400&family=Playfair+Display:wght@900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-Family: 'Cairo', sans-serif;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu a {
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    color: lightgray;
+    font-weight: bold;
+}
+
+.menu a:last-child {
+    margin-left: auto;
+}
+
+h1.titulo {
+    border-style: solid;
+    border-color: grey;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    border-width: 5px;
+    padding-left: 10px;
+    margin-top: 50px;
+}
+
+.dicas {
+    background-color: azure;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-around;
+    display: flex; 
+    padding: 50px;
+}
+
+.dicas > div {
+    border-radius: 10px;
+    height: 200px;
+    width: 350px;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 25px #cfcfcf;
+    padding: 10px 20px;
+    margin: 15px;
+}
+
+.grid-container .item1 { 
+    grid-area: destino1; 
+    background-image: url(images/porto.jpg);
+}
+.grid-container .item2 { 
+    grid-area: destino2; 
+    background-image: url(images/madeira.jpg);
+}
+.grid-container .item3 { 
+    grid-area: destino3;
+    background-image: url(images/acores.jpg);
+}
+
+.grid-container .item4 { 
+    grid-area: destino4;
+    background-image: url(images/alentejo.jpg);
+}
+
+.grid-container .item5 { 
+    grid-area: destino5; 
+    background-image: url(images/algarve.jpg);
+}
+
+.grid-container .item6 { 
+    grid-area: destino6; 
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 300px 100px;
+    grid-template-areas: 
+    'ecoImg ecoImg'
+    'ecoDescricao ecoButton';
+}
+
+.grid-container .item6 .imgDestinoEco {
+    grid-area: ecoImg; 
+    background-image: url(images/caravana.jpg);
+    background-size: cover;
+}
+
+.grid-container .item6 .descDestinoEco {
+    grid-area: ecoDescricao; 
+}
+
+.descDestinoEco div.titulo{
+    font-weight: bold;
+}
+
+.descDestinoEco div.descricao{
+    font-size: small;
+}
+
+.grid-container .item6 .buttonDestinoEco {
+    grid-area: ecoButton;
+    justify-content: center;
+    align-content: center;
+    margin-left: auto;
+}
+
+.buttonTransition {
+  transition-duration: 0.4s;
+  }
+
+.button {
+    background-color: white;
+    color: black;
+    border: 2px solid grey;
+}
+
+.button:hover {
+    background-color: grey;
+    color: white;
+}
+
+.grid-container > div {
+    position: static;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (min-width:901px) {
+    .grid-container {
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+        justify-content: center;
+        grid-template-columns: 20% 20% 20% 40%;
+        grid-template-rows: 200px 200px;
+        grid-template-areas: 
+        'destino1 destino2 destino3 destino6'
+        'destino4 destino4 destino5 destino6';
+    }
+}
+
+@media (max-width:900px) {
+    .grid-container {
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+        justify-content: center;
+        grid-template-columns: 200px 200px ;
+        grid-template-rows: 200px 200px 200px;
+        grid-template-areas: 
+        'destino1 destino2'
+        'destino3 destino4'
+        'destino5 destino5'
+        'destino6 destino6';
+    }
+}
+
+div.posTop {
+    position: relative;
+    top: 10%; left: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+    color: white;
+}
+
+div.posCidade {
+    position: absolute;
+    top: 100px;
+    font-family: 'Playfair Display', serif;
+    font-size: x-large;
+    color: white;
+}
+
+div.posBottom {
+    position: relative;
+    top: 10px;
+    line-height: 100% ;
+    max-width: 150px;
+    font-weight: normal;
+    font-size: small;
+    color: white;
+}
+
+.cabecalho {
+    display: flex;
+    background-image: url("images/caravana.jpg");
+    justify-content:space-around;
+    align-items: space-around;
+    padding: 7%;
+    color: white;
+    background-position: center;
+    background-size: cover;
+}
+
+.cabecalho h1 {
+    text-shadow: 1px 1px 10px black;
+}
+
+.container { 
+    background-color: azure;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-around;
+    display: flex; 
+    padding: 50px;
+}
+
+.container > div {
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    justify-content: space-around;
+    box-shadow: 5px 5px 3px 3px #cfcfcf;
+    margin: 10px;
+}
+
+.container div div:last-child {
+    width:120px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+}
