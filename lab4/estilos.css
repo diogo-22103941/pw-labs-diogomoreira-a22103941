@@ -3,10 +3,33 @@
 * {
     box-sizing: border-box;
     font-Family: 'Cairo', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.grid-top {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 10% 1fr;
+    grid-template-areas: 
+    'menu'
+    'cabecalho';
+}
+
+.grid-top .menu {
+    grid-area: menu;
+}
+
+.grid-top .cabecalho {
+    grid-area: cabecalho;
 }
 
 .menu {
     display: flex;
+    background: white;
+    box-shadow: 0px 0px 10px black;
+    position: sticky;
+    top: 0;
 }
 
 .menu a {
@@ -22,6 +45,38 @@
 
 .menu a:last-child {
     margin-left: auto;
+}
+
+.cabecalho {
+    display: flex;
+    background-image: url("images/caravana.jpg");
+    background-attachment:fixed;
+    justify-content:center;
+    align-items: center;
+    background-repeat: no-repeat;
+    padding: 7%;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    background-position:center;
+    background-size: cover;
+}
+
+.cabecalho h1 {
+    font-size:5vh;
+    text-shadow: 1px 1px 10px black;
+}
+
+footer {
+    display: flex;
+    width:100%;
+    background: rgb(34, 43, 56);
+    box-shadow: 0px 1px 5px inset white;
+    bottom: 0;
+    margin-top: 50px;
+    color: white;
+    justify-content: right;
+    align-items: center;
+    padding: 20px;
 }
 
 h1.titulo {
@@ -136,20 +191,103 @@ h1.titulo {
     position: static;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: opacity 0.5s;
 }
 
-@media (min-width:901px) {
-    .grid-container {
-        display: grid;
-        grid-gap: 10px;
-        padding: 10px;
-        justify-content: center;
-        grid-template-columns: 20% 20% 20% 40%;
-        grid-template-rows: 200px 200px;
-        grid-template-areas: 
-        'destino1 destino2 destino3 destino6'
-        'destino4 destino4 destino5 destino6';
-    }
+.grid-container > div:hover {
+    visibility: visible;
+    opacity: 0.8;
+}
+
+.fotos {
+    display: grid;
+    grid-gap: 50px;
+    padding: 10px;
+    justify-content: center;
+}
+.fotos img {
+    transition: opacity 0.5s, box-shadow 0.5s, transform 0.5s;
+}
+.fotos img:hover {
+    opacity: 0.8;
+    box-shadow: 0px 0px 10px black;
+    transform: rotate(2deg);
+}
+
+.fotos div {
+    position: relative;
+}
+
+.fotos div p {
+    visibility: hidden;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: small;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.fotos div:hover p {
+    visibility: visible;
+    opacity: 0.7;
+}
+
+.fotos img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.fotos .galeria01 {
+    grid-area: galeria01;
+}
+
+.fotos .galeria02 {
+    grid-area: galeria02;
+}
+
+.fotos .galeria03 {
+    grid-area: galeria03;
+}
+.fotos .galeria04 {
+    grid-area: galeria04;
+}
+
+.fotos .galeria05 {
+    grid-area: galeria05;
+}
+
+.fotos .galeria06 {
+    grid-area: galeria06;
+}
+
+.fotos .galeria07 {
+    grid-area: galeria07;
+}
+
+.fotos .galeria08 {
+    grid-area: galeria08;
+}
+
+.fotos .galeria09 {
+    grid-area: galeria09;
+}
+
+.fotos .galeria10 {
+    grid-area: galeria10;
+}
+
+.fotos .galeria11 {
+    grid-area: galeria11;
+}
+
+.fotos .galeria12 {
+    grid-area: galeria12;
 }
 
 @media (max-width:900px) {
@@ -165,6 +303,61 @@ h1.titulo {
         'destino3 destino4'
         'destino5 destino5'
         'destino6 destino6';
+    }
+    
+    .fotos {
+        grid-template-columns: 200px 200px ;
+        grid-template-rows: 200px 200px 200px 200px 200px 200px;
+        grid-template-areas: 
+        'galeria01 galeria02'
+        'galeria03 galeria04'
+        'galeria05 galeria06'
+        'galeria07 galeria08'
+        'galeria09 galeria10'
+        'galeria11 galeria12';
+    }
+}
+
+@media (min-width:901px) {
+    .grid-container {
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+        justify-content: center;
+        grid-template-columns: 20% 20% 20% 40%;
+        grid-template-rows: 200px 200px;
+        grid-template-areas: 
+        'destino1 destino2 destino3 destino6'
+        'destino4 destino4 destino5 destino6';
+    }
+
+    .fotos {
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 200px 200px 200px 200px;
+        grid-template-areas: 
+        'galeria01 galeria02 galeria03'
+        'galeria04 galeria05 galeria06'
+        'galeria07 galeria08 galeria09'
+        'galeria10 galeria11 galeria12';
+    }
+}
+
+@media (max-width:600px) {
+    .fotos {
+        grid-template-columns: 200px ;
+        grid-template-areas: 
+        'galeria01'
+        'galeria02'
+        'galeria03'
+        'galeria04'
+        'galeria05'
+        'galeria06'
+        'galeria07'
+        'galeria08'
+        'galeria09'
+        'galeria10'
+        'galeria11'
+        'galeria12';
     }
 }
 
@@ -192,21 +385,6 @@ div.posBottom {
     font-weight: normal;
     font-size: small;
     color: white;
-}
-
-.cabecalho {
-    display: flex;
-    background-image: url("images/caravana.jpg");
-    justify-content:space-around;
-    align-items: space-around;
-    padding: 7%;
-    color: white;
-    background-position: center;
-    background-size: cover;
-}
-
-.cabecalho h1 {
-    text-shadow: 1px 1px 10px black;
 }
 
 .container { 
@@ -241,4 +419,115 @@ div.posBottom {
 .container img {
     border-radius: 10px 0 0 10px;
     height: 100%;
+}
+
+.animacoes .imagem1 {
+    grid-area: animacao1;
+    position: relative;
+    display: flex;
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    animation-name: animacao;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacao {
+    0% {height: 20px; width: 20px;}
+    25% {transform: rotate(45deg); height: 100px; width: 20px;}
+    50% {transform: rotate(90deg); height: 20px; width: 20px;}
+    75% {transform: rotate(180deg); height: 100px; width: 20px;}
+    100% {transform: rotate(360deg); height: 20px; width: 20px;}
+  }
+
+.animacoes .imagem2 {
+    grid-area: animacao2;
+    position: relative;
+    display: flex;
+    background-color: green;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    animation-name: aumentarDiminuir;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aumentarDiminuir {
+    0% {height: 50px;
+        width: 50px;}
+    50% {height: 100px;
+        width: 100px;}
+    51% {
+        transform: rotate(90deg);
+    }
+    100% {height: 50px;
+        width: 50px;
+        }
+  }
+
+.animacoes .imagem3 {
+    grid-area: animacao3;
+    position: relative;
+    display: flex;
+    background-color: blue;
+    height: 20px;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    animation-name: moverQuadrado;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moverQuadrado {
+    0% {left:0px; top:0px;}
+    25% {left:80px; top:0px;}
+    50% {left:80px; top:80px;}
+    75% {left:0px; top:80px;}
+    100% {left:0px; top:0px;}
+  }
+
+.animacoes .imagem4 {
+    grid-area: animacao4;
+    display: flex;
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.animacoes .imagem4 p:hover {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.animacoes .imagem4:active {
+    animation-name: rotacaoClick;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes rotacaoClick {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+  }
+
+.animacoes {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    grid-template-columns: 100px 100px ;
+    grid-template-rows: 100px 100px ;
+    grid-template-areas: 
+    'animacao1 animacao2'
+    'animacao3 animacao4';
 }
